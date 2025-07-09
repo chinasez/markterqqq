@@ -149,7 +149,7 @@ const ArrivalsSlider = () => {
             <div className="mt-2 text-start">
               <StarRating rating={product.rating || 0} />
               <p className="text-base">{product.title}</p>
-              <p className="text-sm">{product.price.toFixed(2)}</p>
+              <p className="text-sm">${product.price.toFixed(2)}</p>
             </div>
           </SwiperSlide>
         ))}

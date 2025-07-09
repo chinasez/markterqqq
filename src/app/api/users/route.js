@@ -36,14 +36,14 @@ export async function POST(req) {
       },
     });
 
-    // Генерация JWT
+
     const token = jwt.sign(
       { userId: newUser.id, email: newUser.email },
       JWT_SECRET,
       { expiresIn: '7d' }
     );
 
-    // Возвращаем токен в ответе
+
     return NextResponse.json(
       { message: 'Пользователь создан', token, user: newUser },
       { status: 201 }
