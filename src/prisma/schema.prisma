@@ -1,0 +1,73 @@
+  generator client {
+    provider = "prisma-client-js"
+  }
+
+  datasource db {
+    provider  = "postgresql"
+    url       = env("DATABASE_URL")
+    directUrl = env("DIRECT_URL")
+  }
+
+  model order_items {
+    id         Int       @id @default(autoincrement())
+    order_id   Int?
+    product_id Int?
+    quantity   Int
+    orders     orders?   @relation(fields: [order_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+    products   products? @relation(fields: [product_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  }
+
+  model orders {
+    id          Int           @id @default(autoincrement())
+    user_id     String?       @db.Uuid
+    total_price Int
+    status      String?       @default("pending")
+    created_at  DateTime?     @default(now()) @db.Timestamp(6)
+    order_items order_items[]
+    users       users?        @relation(fields: [user_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  }
+
+  model products {
+    id          Int           @id @default(autoincrement())
+    title       String
+    slug        String        @unique
+    price       Int
+    description String?
+    image       String?
+    created_at  DateTime?     @default(now()) @db.Timestamp(6)
+    order_items order_items[]
+    cart_items  cart_items[]
+    rating      Float?        @default(0)
+  }
+
+  model users {
+    id         String    @id @default(uuid()) @db.Uuid
+    email      String    @unique
+    firstName  String
+    lastName   String
+    password   String
+    created_at DateTime? @default(now()) @db.Timestamp(6)
+    orders     orders[]
+    cart       cart?
+  }
+
+  model cart {
+    id         Int          @id @default(autoincrement())
+    user_id    String       @unique @db.Uuid
+    created_at DateTime?    @default(now()) @db.Timestamp(6)
+    updated_at DateTime?    @updatedAt @db.Timestamp(6)
+    user       users        @relation(fields: [user_id], references: [id], onDelete: Cascade)
+    cart_items cart_items[]
+  }
+
+  model cart_items {
+    id         Int @id @default(autoincrement())
+    cart_id    Int
+    product_id Int
+    quantity   Int @default(1)
+
+    cart    cart     @relation(fields: [cart_id], references: [id], onDelete: Cascade)
+    product products @relation(fields: [product_id], references: [id], onDelete: Cascade)
+
+    @@unique([cart_id, product_id]) // чтобы один и тот же товар не дублировался
+  }

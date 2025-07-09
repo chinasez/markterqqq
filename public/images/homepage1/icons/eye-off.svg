@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+<g id="surface1">
+<path style="fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke:rgb(44.313726%,44.313726%,47.843137%);stroke-opacity:1;stroke-miterlimit:4;" d="M 2.78125 21 L 21.53125 3 "/>
+<path style="fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke:rgb(44.313726%,44.313726%,47.843137%);stroke-opacity:1;stroke-miterlimit:4;" d="M 19.75 8.878906 C 20.863281 9.691406 21.894531 10.617188 22.824219 11.636719 C 23.097656 11.941406 23.25 12.339844 23.25 12.75 C 23.25 13.160156 23.097656 13.558594 22.824219 13.863281 C 20.257812 16.6875 16.097656 19.566406 12 19.5 C 10.984375 19.507812 9.972656 19.359375 9 19.0625 "/>
+<path style="fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke:rgb(44.313726%,44.313726%,47.843137%);stroke-opacity:1;stroke-miterlimit:4;" d="M 3.777344 16.261719 C 2.847656 15.535156 1.976562 14.734375 1.179688 13.859375 C 0.902344 13.554688 0.75 13.160156 0.75 12.746094 C 0.75 12.335938 0.902344 11.941406 1.179688 11.632812 C 3.800781 8.75 7.96875 5.933594 12 6 C 12.773438 5.992188 13.546875 6.078125 14.300781 6.253906 "/>
+<path style="fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke:rgb(44.313726%,44.313726%,47.843137%);stroke-opacity:1;stroke-miterlimit:4;" d="M 12 9 C 11.507812 9 11.019531 9.097656 10.5625 9.285156 C 10.109375 9.472656 9.695312 9.75 9.347656 10.097656 C 9 10.445312 8.722656 10.859375 8.535156 11.3125 C 8.351562 11.757812 8.253906 12.234375 8.25 12.714844 "/>
+<path style="fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke:rgb(44.313726%,44.313726%,47.843137%);stroke-opacity:1;stroke-miterlimit:4;" d="M 12 16.5 C 12.492188 16.5 12.980469 16.402344 13.433594 16.214844 C 13.890625 16.023438 14.304688 15.75 14.652344 15.402344 C 15 15.050781 15.277344 14.640625 15.464844 14.183594 C 15.648438 13.734375 15.746094 13.257812 15.75 12.773438 "/>
+</g>
+</svg>

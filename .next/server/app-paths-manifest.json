@@ -1,0 +1,11 @@
+{
+  "/api/cart/route": "app/api/cart/route.js",
+  "/api/products/route": "app/api/products/route.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/cart/add/route": "app/api/cart/add/route.js",
+  "/api/cart/remove/route": "app/api/cart/remove/route.js",
+  "/sign-in/page": "app/sign-in/page.js",
+  "/sign-up/page": "app/sign-up/page.js",
+  "/cart/page": "app/cart/page.js",
+  "/page": "app/page.js"
+}
